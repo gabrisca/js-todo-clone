@@ -17,6 +17,12 @@ body {
 
 #my_todolist {
   height: 100%;
+  margin-top: 20px;
+}
+
+#greetings {
+  color: white;
+  text-transform: uppercase;
 }
 
 h1 {

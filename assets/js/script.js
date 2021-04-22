@@ -52,16 +52,53 @@ $(function () {
     };
   });
 
+  // AGGIUNGO LA POSSIBILITA' DI CANCELLARE L'INTERO CONTENUTO DELLA LISTA (PER ALLENAMENTO)
   // creo una var in cui salvo l'id #delete
   var delete_all = $("#delete i");
   console.log(delete_all);
-
   // al click su delete...
   $(document).on("click", delete_all, function () {
     // ... cancello tutti i figli di #lista ul. Utilizzo empty
     $("#lista ul").empty(strHtml);
   });
-  
 
+  // AGGIUNGO UN SALUTO IN BASE ALL'ORA (PER ALLENAMENTO)
+  // salvo nella variabile greetings l'lemento con id greetings
+  var greetings = $("#greetings");
+  // ne leggo il contenuto con .text
+  console.log(greetings.text());
+  // ne modifico il contenuto applicando la variabile GETGREETINGS
+  greetings.text(getGreetings);
 });
 
+
+
+
+
+// //////////////////////////////////
+// F  U   N   C  T   I   O   N   S //
+/////////////////////////////////////
+
+function getGreetings (){
+  // salvo in una var in cui salvo l'oggetto Date
+  var today = new Date();
+  // salvo in una var l'ora corrente
+  var currentHour = today.getHours();
+  console.log("sono le "  + currentHour)
+  // creo una var greetings, momentaneamente senza contenuto
+  var greeting;
+
+  if(currentHour > 18){
+    greeting = "buonasera";
+  } else if (currentHour > 12) {
+    greeting = "buon pomeriggio";
+  } else if (currentHour > 0) {
+    greeting = "buongiorno";
+  } else {
+    greeting = "benvenuto";
+  }
+
+  return greeting
+}
+
+console.log(getGreetings)
