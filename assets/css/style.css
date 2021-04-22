@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 body {
@@ -36,7 +37,7 @@ h1 {
   background-color: rgba(242, 242, 248, 0.952);
 }
 
-#app .input_text:hover{
+#app .input_text:hover {
   background-color: white;
 }
 
@@ -51,7 +52,7 @@ h1 {
   list-style: none;
 }
 
-#lista ul li{
+#lista ul li {
   margin: 15px auto;
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,7 @@ h1 {
   #app .input_text {
     width: 80%;
   }
-  #lista ul li{
+  #lista ul li {
     width: 80%;
   }
 }
@@ -78,7 +79,7 @@ h1 {
   #app .input_text {
     width: 65%;
   }
-  #lista ul li{
+  #lista ul li {
     width: 65%;
   }
 }
@@ -87,7 +88,7 @@ h1 {
   #app .input_text {
     width: 60%;
   }
-  #lista ul li{
+  #lista ul li {
     width: 60%;
   }
 }
@@ -96,7 +97,7 @@ h1 {
   #app .input_text {
     width: 50%;
   }
-  #lista ul li{
+  #lista ul li {
     width: 50%;
   }
 }
