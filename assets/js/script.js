@@ -88,41 +88,43 @@ $(function () {
 
   // AGGIUNGO ICONA SOLE O LUNA IN RELAZIONE ALL'ORARIO
   if((currentHour >= 06) && (currentHour <= 19)){
-    $("#sun").hide();
-    $("#moon").show();
-  } else {
     $("#moon").hide();
     $("#sun").show();
+  } else {
+    $("#sun").hide();
+    $("#moon").show();
   }
 });
 
 
-// //////////////////////////////////
-// F  U   N   C  T   I   O   N   S //
-/////////////////////////////////////
+  // //////////////////////////////////
+  // F  U   N   C  T   I   O   N   S //
+  /////////////////////////////////////
 
-function getGreetings (){
-  // salvo in una var in cui salvo l'oggetto Date
-  var today = new Date();
-  // salvo in una var l'ora corrente
-  var currentHour = today.getHours();
-  // salvo in una var i minuti correnti
-  var currentMin = today.getMinutes();
-  console.log("sono le "  + currentHour + ":" +currentMin)
-  // creo una var greetings, momentaneamente senza contenuto
-  var greeting;
-
-  if((currentHour >= 06) && (currentHour <= 11)){
-    greeting = "buongiorno";
-  } else if ((currentHour >= 12) && (currentHour <= 17)) {
-    greeting = "buon pomeriggio";
-  } else if ((currentHour >= 18) && (currentHour <= 24)) {
-    greeting = "buonasera";
-  } else {
-    greeting = "benvenuto";
+  function getGreetings (){
+    // salvo in una var in cui salvo l'oggetto Date
+    var today = new Date();
+    // salvo in una var l'ora corrente
+    var currentHour = today.getHours();
+    // salvo in una var i minuti correnti
+    var currentMin = today.getMinutes();
+    console.log("sono le "  + currentHour + ":" +currentMin)
+    // creo una var greetings, momentaneamente senza contenuto
+    var greeting;
+  
+    if((currentHour >= 06) && (currentHour <= 11)){
+      greeting = "buongiorno";
+    } else if ((currentHour >= 12) && (currentHour <= 17)) {
+      greeting = "buon pomeriggio";
+    } else if ((currentHour >= 18) && (currentHour <= 24)) {
+      greeting = "buonasera";
+    } else {
+      greeting = "benvenuto";
+    }
+  
+    return greeting
   }
+  
+  console.log(getGreetings)
 
-  return greeting
-}
 
-console.log(getGreetings)
