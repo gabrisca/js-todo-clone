@@ -7,20 +7,16 @@
 }
 
 body {
-  background-color: white;
-  height: 100vh;
-}
-
-#my_todolist {
-  height: 100%;
-}
-
-.mc_bg_color_blue {
   background-color: rgb(42, 80, 184);
+  /* height: 100vh; */
 }
 
 .mc_color_white {
   color: white;
+}
+
+#my_todolist {
+  height: 100%;
 }
 
 h1 {
@@ -63,6 +59,20 @@ h1 {
 
 #lista ul li i {
   cursor: pointer;
+}
+
+#delete {
+  text-align: center;
+  color: white;
+}
+
+#delete i{
+  cursor: pointer;
+  color: rgba(156, 19, 19, 0.616);
+}
+
+#delete i:hover{
+  color: rgba(223, 10, 10, 0.904);
 }
 
 /* MEDIA QUERIES ******************/
