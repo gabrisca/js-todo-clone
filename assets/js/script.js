@@ -57,7 +57,7 @@ $(function () {
   var delete_all = $("#delete i");
   console.log(delete_all);
   // al click su delete...
-  $(document).on("click", delete_all, function () {
+  $("#delete i").on("click", delete_all, function () {
     // ... cancello tutti i figli di #lista ul. Utilizzo empty
     $("#lista ul").empty(strHtml);
   });
