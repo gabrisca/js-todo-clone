@@ -2,8 +2,103 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  background-color: red;
+  background-color: white;
+  height: 100vh;
 }
+
+#my_todolist {
+  height: 100%;
+}
+
+.mc_bg_color_blue {
+  background-color: rgb(42, 80, 184);
+}
+
+.mc_color_white {
+  color: white;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+#app .input_text {
+  height: 40px;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0px 5px 5px rgba(5, 5, 5, 0.342);
+  background-color: rgba(242, 242, 248, 0.952);
+}
+
+#app .input_text:hover{
+  background-color: white;
+}
+
+#app .border {
+  width: 50%;
+  height: 3px;
+  margin: 20px auto;
+  background-color: white;
+}
+
+#lista ul {
+  list-style: none;
+}
+
+#lista ul li{
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+  color: white;
+  font-size: 1.4em;
+}
+
+#lista ul li i {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES ******************/
+@media all and (max-width: 767px) {
+  #app .input_text {
+    width: 80%;
+  }
+  #lista ul li{
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #app .input_text {
+    width: 65%;
+  }
+  #lista ul li{
+    width: 65%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  #app .input_text {
+    width: 60%;
+  }
+  #lista ul li{
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  #app .input_text {
+    width: 50%;
+  }
+  #lista ul li{
+    width: 50%;
+  }
+}
+
+/* /MEDIA QUERIES ******************/
