@@ -25,6 +25,18 @@ body {
   text-transform: uppercase;
 }
 
+#greet_icons {
+  text-align: right;
+}
+
+#sun{
+  color: goldenrod;
+}
+
+#moon{
+  color: grey;
+}
+
 h1 {
   margin-bottom: 40px;
 }

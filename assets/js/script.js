@@ -69,10 +69,32 @@ $(function () {
   console.log(greetings.text());
   // ne modifico il contenuto applicando la variabile GETGREETINGS
   greetings.text(getGreetings);
+
+  // AL CLICK SU ID GREETINGS ALTERNO SALUTO E ORA (RICORDARSI DI USARE UNA VAR FLAG)
+  var today = new Date();
+  var currentHour = today.getHours();
+  var currentMin = today.getMinutes();
+  var flag = false;
+
+  $(greetings).on("click", greetings, function () {
+    if(flag === false){
+      greetings.text("sono le "  + currentHour + ":" + currentMin);
+      flag = true;
+    } else if (flag === true){
+      greetings.text(getGreetings);
+      flag = false;
+    }
+  });
+
+  // AGGIUNGO ICONA SOLE O LUNA IN RELAZIONE ALL'ORARIO
+  if((currentHour >= 06) && (currentHour <= 19)){
+    $("#sun").hide();
+    $("#moon").show();
+  } else {
+    $("#moon").hide();
+    $("#sun").show();
+  }
 });
-
-
-
 
 
 // //////////////////////////////////
@@ -84,16 +106,18 @@ function getGreetings (){
   var today = new Date();
   // salvo in una var l'ora corrente
   var currentHour = today.getHours();
-  console.log("sono le "  + currentHour)
+  // salvo in una var i minuti correnti
+  var currentMin = today.getMinutes();
+  console.log("sono le "  + currentHour + ":" +currentMin)
   // creo una var greetings, momentaneamente senza contenuto
   var greeting;
 
-  if(currentHour > 18){
-    greeting = "buonasera";
-  } else if (currentHour > 12) {
-    greeting = "buon pomeriggio";
-  } else if (currentHour > 0) {
+  if((currentHour >= 06) && (currentHour <= 11)){
     greeting = "buongiorno";
+  } else if ((currentHour >= 12) && (currentHour <= 17)) {
+    greeting = "buon pomeriggio";
+  } else if ((currentHour >= 18) && (currentHour <= 24)) {
+    greeting = "buonasera";
   } else {
     greeting = "benvenuto";
   }
